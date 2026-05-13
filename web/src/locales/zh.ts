@@ -41,8 +41,8 @@ export default {
     login: {
       login: '登录',
       signUp: '注册',
-      loginDescription: '很高兴再次见到您！',
-      registerDescription: '很高兴您加入！',
+      loginDescription: '继续进行检索与类案推荐验证',
+      registerDescription: '创建研究验证账户',
       emailLabel: '邮箱',
       emailPlaceholder: '请输入邮箱地址',
       passwordLabel: '密码',
@@ -54,10 +54,10 @@ export default {
       nicknamePlaceholder: '请输入名称',
       register: '创建账户',
       continue: '继续',
-      title: '开始构建您的智能助手',
+      title: '法律智能检索实验平台',
       description:
-        '免费注册以探索顶级 RAG 技术。 创建知识库和人工智能来增强您的业务',
-      review: '来自 500 多条评论',
+        '面向信息检索、法律查询与类案推荐验证，支持语料构建、检索测试和结果分析。',
+      review: '用于研究验证与实验评估',
     },
     header: {
       knowledgeBase: '知识库',
