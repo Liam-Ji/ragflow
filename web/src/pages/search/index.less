@@ -1,8 +1,11 @@
 .searchPage {
+  background-color: #f6f8fb;
   background-position: center;
   background-size: cover;
   .card {
     width: 100%;
+    border: 1px solid #e2e8f0;
+    box-shadow: none;
     :global(.ant-card-body) {
       padding: 14px;
     }
@@ -21,6 +24,7 @@
   position: relative;
   max-width: 400px !important;
   min-width: auto !important;
+  border-right: 1px solid #e2e8f0;
 
   :global(.ant-layout-sider-children) {
     height: auto;
@@ -93,10 +97,14 @@
 }
 .answerWrapper {
   margin-top: 16px;
-  background: rgba(232 242 251, 1);
-  box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.08);
+  border: 1px solid #cfe6e2;
+  background: #ffffff;
+  box-shadow: none;
   :global(.ant-card-head) {
-    background-color: #e6f4ff23;
+    min-height: 44px;
+    border-bottom-color: #cfe6e2;
+    background-color: #f0fdfa;
+    color: #134e4a;
   }
   & p {
     margin: 0;
@@ -104,8 +112,12 @@
 }
 
 .input() {
+  :global(.ant-input-group-wrapper) {
+    box-shadow: 0 8px 24px rgba(15, 23, 42, 0.08);
+  }
   :global(.ant-input-affix-wrapper) {
-    padding: 4px 12px;
+    padding: 3px 14px;
+    border-color: #cbd5e1;
     border-start-start-radius: 30px !important;
     border-end-start-radius: 30px !important;
   }
@@ -113,10 +125,10 @@
   //   background-color: transparent;
   // }
   input {
-    height: 40px;
+    height: 38px;
   }
   button {
-    height: 50px !important;
+    height: 46px !important;
     border-start-end-radius: 30px !important;
     border-end-end-radius: 30px !important;
   }

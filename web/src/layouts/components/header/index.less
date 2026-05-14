@@ -18,7 +18,7 @@
 
 .appIcon {
   vertical-align: middle;
-  max-width: 36px;
+  max-width: 32px;
 }
 
 .appName {
@@ -28,22 +28,29 @@
   font-style: normal;
   font-weight: 600;
   line-height: 20px;
+  color: #1e293b;
 }
 
 .radioGroup {
   & label {
-    height: 40px;
-    line-height: 40px;
-    border: 0 !important;
-    background-color: rgba(249, 249, 249, 1);
-    font-weight: @fontWeight700;
-    color: rgba(29, 25, 41, 1);
+    height: 38px;
+    line-height: 38px;
+    border: 1px solid #d8dee8 !important;
+    background-color: #f8fafc;
+    font-weight: @fontWeight600;
+    color: #334155;
     &::before {
       display: none !important;
     }
+    &:hover {
+      color: #1e3a5f;
+      background-color: #f1f5f9;
+    }
   }
   :global(.ant-radio-button-wrapper-checked) {
+    border-color: #1e3a5f !important;
     border-radius: 6px !important;
+    background-color: #1e3a5f !important;
     & a {
       color: white;
     }
@@ -72,18 +79,23 @@
 
 .radioGroupDark {
   & label {
-    height: 40px;
-    line-height: 40px;
-    border: 0 !important;
-    background-color: rgba(249, 249, 249, 0.25);
-    font-weight: @fontWeight700;
-    color: rgba(29, 25, 41, 1);
+    height: 38px;
+    line-height: 38px;
+    border: 1px solid rgba(255, 255, 255, 0.18) !important;
+    background-color: rgba(255, 255, 255, 0.08);
+    font-weight: @fontWeight600;
+    color: rgba(255, 255, 255, 0.82);
     &::before {
       display: none !important;
     }
+    &:hover {
+      background-color: rgba(255, 255, 255, 0.14);
+    }
   }
   :global(.ant-radio-button-wrapper-checked) {
+    border-color: #0f766e !important;
     border-radius: 6px !important;
+    background-color: #0f766e !important;
     & a {
       color: white;
     }

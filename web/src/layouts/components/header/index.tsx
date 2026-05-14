@@ -97,7 +97,7 @@ const RagHeader = () => {
                 >
                   <item.icon
                     className={styles.radioButtonIcon}
-                    stroke={item.name === currentPath ? 'black' : 'white'}
+                    stroke={item.name === currentPath ? 'white' : '#475569'}
                   ></item.icon>
                   {item.name}
                 </Flex>
