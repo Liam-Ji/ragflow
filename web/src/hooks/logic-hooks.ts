@@ -1,6 +1,5 @@
 import { Authorization } from '@/constants/authorization';
 import { MessageType } from '@/constants/chat';
-import { LanguageTranslationMap } from '@/constants/common';
 import { ResponseType } from '@/interfaces/database/base';
 import { IAnswer, Message } from '@/interfaces/database/chat';
 import { IKnowledgeFile } from '@/interfaces/database/knowledge';
@@ -55,11 +54,9 @@ export const useChangeLanguage = () => {
   const { i18n } = useTranslation();
   const { saveSetting } = useSaveSetting();
 
-  const changeLanguage = (lng: string) => {
-    i18n.changeLanguage(
-      LanguageTranslationMap[lng as keyof typeof LanguageTranslationMap],
-    );
-    saveSetting({ language: lng });
+  const changeLanguage = () => {
+    i18n.changeLanguage('zh');
+    saveSetting({ language: 'Chinese' });
   };
 
   return changeLanguage;

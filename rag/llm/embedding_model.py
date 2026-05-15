@@ -118,8 +118,7 @@ class OpenAIEmbed(Base):
         self.model_name = model_name
 
     def encode(self, texts: list):
-        # OpenAI requires batch size <=16
-        batch_size = 16
+        batch_size = 8
         texts = [truncate(t, 8191) for t in texts]
         ress = []
         total_tokens = 0
@@ -680,18 +679,16 @@ class SILICONFLOWEmbed(Base):
         self.model_name = model_name
 
     def encode(self, texts: list):
-        batch_size = 16
         ress = []
         token_count = 0
-        for i in range(0, len(texts), batch_size):
-            texts_batch = texts[i : i + batch_size]
+        for text in texts:
             payload = {
                 "model": self.model_name,
-                "input": texts_batch,
+                "input": text,
                 "encoding_format": "float",
             }
             res = requests.post(self.base_url, json=payload, headers=self.headers).json()
-            if "data" not in res or not isinstance(res["data"], list) or len(res["data"]) != len(texts_batch):
+            if "data" not in res or not isinstance(res["data"], list) or len(res["data"]) != 1:
                 raise ValueError(f"SILICONFLOWEmbed.encode got invalid response from {self.base_url}")
             ress.extend([d["embedding"] for d in res["data"]])
             token_count += self.total_token_count(res)
